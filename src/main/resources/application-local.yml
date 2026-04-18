@@ -1,0 +1,21 @@
+# ==================
+# 로컬 개발용
+# ==================
+spring:
+  datasource:
+    url: ${LOCAL_DB_URL}
+    username: ${LOCAL_DB_USERNAME}
+    password: ${LOCAL_DB_PASSWORD}
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+
+  jwt:
+    secret: local-secret-key
+    access-token-expiration: 3600000
+    refresh-token-expiration: 1209600000

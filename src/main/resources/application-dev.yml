@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: ${DEV_DATABASE_URL}
+    username: ${DEV_DB_USERNAME}
+    password: ${DEV_DB_PASSWORD}
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+
+jwt:
+  secret: ${DEV_JWT_SECRET}
+  access-token-expiration: 3600000
+  refresh-token-expiration: 1209600000
