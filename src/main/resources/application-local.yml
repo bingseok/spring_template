@@ -9,13 +9,13 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
     properties:
       hibernate:
         show_sql: true
         format_sql: true
 
-  jwt:
-    secret: local-secret-key
-    access-token-expiration: 3600000
-    refresh-token-expiration: 1209600000
+jwt:
+  secret: my-super-long-secret-key-that-is-over-32-bytes
+  access-token-expiration: 3600000
+  refresh-token-expiration: 1209600000
